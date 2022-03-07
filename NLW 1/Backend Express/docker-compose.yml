@@ -1,0 +1,50 @@
+version: "3"
+
+services:
+  db:
+    image: postgres
+    container_name: db
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      PGDATA: /data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - pgsql
+    volumes:
+      - .:/home/node/app/.dbdata/PGSQL:/data/postgres
+
+  pgadmin:
+    container_name: db_admin
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
+    volumes:
+      - .:/home/node/app/.dbdata/PGADMIN:/root/.pgadmin
+    ports:
+      - "5050:80"
+    networks:
+      - pgsql
+    depends_on:
+      - db
+
+  app:
+    build: .
+    entrypoint: ./.docker/entrypoint.sh
+    container_name: backend-express
+    depends_on:
+      - db
+      - pgadmin
+    ports:
+      - 8000:8000
+    networks:
+      - pgsql
+    volumes:
+      - .:/home/node/app
+
+networks:
+  pgsql:
+    driver: bridge
