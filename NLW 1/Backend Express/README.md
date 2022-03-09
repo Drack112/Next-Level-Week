@@ -37,7 +37,7 @@ $ yarn dev
 $ docker-compose up db
 ```
 
-```
+```bash
 $ yarn run knex:migrate
 $ yarn run knex:seed
 ```
