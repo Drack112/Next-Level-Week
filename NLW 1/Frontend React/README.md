@@ -8,8 +8,7 @@
 <br>
 
 <div align="center">
-    <a href="#sobre">Sobre</a> | <a href="#tecnologias">Tecnologias</a> | <a href="#run">Rodando o projeto</a> | <a href="#contato">Contato</a>
-
+    <a href="#sobre">Sobre</a> | <a href="#tecnologias">Tecnologias</a> | <a href="#run">Rodando o projeto</a> 
 </div>
 
 <a id="sobre"></a>
