@@ -1,13 +1,17 @@
 import React, { useEffect, useState, ChangeEvent, FormEvent } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
-import { Map, TileLayer, Marker } from "react-leaflet";
+import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import { LeafletMouseEvent } from "leaflet";
+
 import axios from "axios";
+
 import api from "../../services/api";
-import "./styles.css";
 import logo from "../../assets/logo.svg";
+
 import Dropzone from "../../components/Dropzone";
+
+import "./styles.css";
 
 interface Item {
   id: number;
@@ -43,7 +47,7 @@ const CreatePoint = () => {
   ]);
   const [selectedFile, setSelectedFile] = useState<File>();
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -140,7 +144,7 @@ const CreatePoint = () => {
 
     await api.post("points", data);
     alert("ponto de coleta criado");
-    history.push("/");
+    navigate("/");
   }
 
   return (
@@ -197,13 +201,17 @@ const CreatePoint = () => {
               <span>Selecione o endereço no mapa</span>
             </legend>
 
-            <Map center={initialPosition} zoom={15} onClick={handleMapClick}>
+            <MapContainer
+              center={initialPosition}
+              zoom={15}
+              onClick={handleMapClick}
+            >
               <TileLayer
                 attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
               <Marker position={selectedPosition} />
-            </Map>
+            </MapContainer>
             <div className="field-group">
               <div className="field">
                 <label htmlFor="uf">Estado (UF)</label>

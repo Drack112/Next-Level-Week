@@ -1,7 +1,8 @@
 import React, { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
-import "./styles.css";
 import { FiUpload } from "react-icons/fi";
+
+import "./styles.css";
 
 interface Props {
   onFileUploaded: (file: File) => void;

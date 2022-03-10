@@ -26,6 +26,15 @@
     "project": "./tsconfig.json"
   },
   "rules": {
+    "import/no-extraneous-dependencies": [
+      "warn",
+      {
+        "devDependencies": false,
+        "optionalDependencies": false,
+        "peerDependencies": false,
+        "bundleDependencies": false
+      }
+    ],
     "linebreak-style": "off",
     "prettier/prettier": [
       "error",
@@ -33,13 +42,5 @@
         "endOfLine": "auto"
       }
     ]
-  },
-  "import/no-extraneous-dependencies": [
-    "error",
-    {
-      "devDependencies": false,
-      "optionalDependencies": false,
-      "peerDependencies": false
-    }
-  ]
+  }
 }

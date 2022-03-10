@@ -1,39 +1,73 @@
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Drack112/Next-Level-Week">
+<h1 style="text-align:center">Ecoleta Mobile</h1>
+<br>
+<div align="center">
+    <img src="https://img.shields.io/badge/Framework-Expo-success">
+    <img src="https://img.shields.io/badge/%3C%3E-typescript-blueviolet">
+    <img src="https://img.shields.io/badge/Style-CSS-blue">
+</div>
+<br>
 
-## 💻 Project
+<div align="center">
+    <a href="#sobre">Sobre</a> | <a href="#tecnologias">Tecnologias</a> | <a href="#run">Rodando o projeto</a>
+</div>
 
-Desenvolvido usando as tecnologias:
+<a id="sobre"></a>
 
-- [Node.js][nodejs]
-- [TypeScript][typescript]
-- [React][reactjs]
-- [React Native][rn]
-- [Expo][expo]
+## :recycle: Sobre Projeto Ecoleta
 
-## 🔖 Layout
+O projeto **Ecoleta** visa ajudar pessoas que tenham o interesse de descartar resíduos que possam agredir o meio ambiente em locais adequados onde poderam ser reciclados e reaproveitados.
 
-Acess o figma do projeto: [Figma](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/).
+Com ele um estabelecimento pode efetuar um cadastro informando sua localidade e tipos de itens que ele reclica como lâmpadas, óleo de cozinhas, papelão, etc.
 
-### Install Mobile
+Com o aplicativo mobile qualquer pessoa pode buscar por estabelecimentos próximos que faça a coleta dos itens reciclaveis que deseja descartar.
+Com isso você ajuda a preservar o nosso planeta reciclando. 🥰
+
+<a id="tecnologias"></a>
+
+## :computer: Tecnologias
+
+O backend da aplicação foi desenvolvido utilizando as tecnologias:
+
+- [Node.JS](https://nodejs.org/en/docs/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Docker](https://www.docker.com)
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+
+<a id="run"></a>
+
+## :running: Rodando o projeto
+
+### DEV Containers🤯
+
+A aplicação tem suporte para **[DevContainers](https://code.visualstudio.com/docs/remote/containers)**, para rodar basta ter o **[Docker](https://www.docker.com)** rodando na maquina e o VsCode para entrar no container de desenvolvimento.
+
+### Rodando através da fonte.
+
+#### 1. Pré-requisitos:
+
+- **[Node.js](https://nodejs.org/en/)**, **[Git](https://git-scm.com/)** e um gerenciador de pacotes (**[NPM](https://www.npmjs.com/)** ou **[Yarn](https://yarnpkg.com/)**) instalados na máquina.
+
+#### 2. Instalando dependencias
 
 ```bash
-
-# Install dependencies
+$ npm install
+# ou
 $ yarn install
-
-# Run
-$ yarn start
-
-# Expo will open, just scan the qrcode on terminal or expo page
-
-# If some problem with fonts, execute:
-$ expo install expo-font @expo-google-fonts/ubuntu @expo-google-fonts/roboto
-
 ```
 
-[nodejs]: https://nodejs.org/
-[typescript]: https://www.typescriptlang.org/
-[expo]: https://expo.io/
-[reactjs]: https://reactjs.org
-[rn]: https://facebook.github.io/react-native/
-[yarn]: https://yarnpkg.com/****
+#### 3. Iniciando o app Mobile
+
+```bash
+$ npm run start
+# ou
+$ yarn run start
+```
+
+Não esqueça de configurar devidamente seu ambiente e vamos lá ;)
+
+\*Este conteúdo foi sendo desenvolvido com base nas aulas do modulo **Booster\***
+
+#### _Sinta-se livre para colaborar, toda ajuda é bem vinda ;)_
+
+<br/>
