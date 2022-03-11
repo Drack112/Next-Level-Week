@@ -21,6 +21,8 @@
   <img alt="Ecoleta" src=".github/ecoleta.png" width="100%">
 </p>
 
+<a id="rocket-tecnologias"></a>
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
@@ -30,13 +32,19 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React Native](https://facebook.github.io/react-native/)
 - [Expo](https://expo.io/)
 
+<a id="-projeto"></a>
+
 ## 💻 Projeto
 
 O Ecoleta é um marketplace que ajuda pessoas a encontrarem pontos de coleta de resíduos de forma eficiente.
 
+<a id="-layout"></a>
+
 ## 🔖 Layout
 
 Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/9TlOcj6l7D05fZhU12xWT3/Ecoleta-Booster?node-id=0%3A1). Lembrando que você precisa ter uma conta no [Figma](http://figma.com/) para acessá-lo.
+
+<a id="-como-contribuir"></a>
 
 ## 🤔 Como contribuir
 
@@ -46,5 +54,3 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 - Faça push para a sua branch: `git push origin minha-feature`.
 
 Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
-
-Todos os créditos vão para a Rocketseat :wave: [Participe da comunidade!](https://discordapp.com/invite/gCRAFhc)

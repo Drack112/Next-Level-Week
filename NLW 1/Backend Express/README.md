@@ -41,7 +41,7 @@ O backend da aplicação foi desenvolvido utilizando as tecnologias:
 
 ## :running: Rodando o projeto
 
-### DEV Containers🤯
+### DEV Containers 🤯
 
 A aplicação tem suporte para **[DevContainers](https://code.visualstudio.com/docs/remote/containers)**, para rodar basta ter o **[Docker](https://www.docker.com)** rodando na maquina e o VsCode para entrar no container de desenvolvimento.
 
