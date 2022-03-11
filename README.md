@@ -5,6 +5,7 @@
 Todos os créditos vão para a Rocketseat :wave: [Participe da comunidade!](https://discordapp.com/invite/gCRAFhc)
 
 <br/>
+
 ### 🔖 Licença
 
 Clique na logo abaixo para conferir mais sobre a **_licença_** do projeto.
