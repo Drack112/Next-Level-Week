@@ -30,7 +30,9 @@
     "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
     "test": "DISABLE_ESLINT_PLUGIN=true react-scripts test",
     "eject": "react-scripts eject",
-    "format": "prettier --write src/**/*.ts{,x}"
+    "format": "prettier --write src/**/*.ts{,x}",
+    "lint": "eslint ./src/*.{ts,tsx,json}",
+    "lintFix": "eslint ./src/*.{ts,tsx,json} --fix"
   },
   "eslintConfig": {
     "extends": [

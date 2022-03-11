@@ -1,9 +1,9 @@
-# Proffy React</p>
-
+<h1 style="text-align:center">Proffy Frontend</h1>
 <br>
 <div align="center">
-    <img src="https://img.shields.io/badge/web-react-blue">
+    <img src="https://img.shields.io/badge/Framework-React-success">
     <img src="https://img.shields.io/badge/%3C%3E-typescript-blueviolet">
+    <img src="https://img.shields.io/badge/Style-CSS-blue">
 </div>
 <br>
 
@@ -13,21 +13,51 @@
 
 <a id="sobre"></a>
 
-## :recycle: Sobre Projeto Ecoleta
+## 📕 Sobre Projeto Proffy
 
-<strong>Proffy</strong> é uma plataforma de estudos online que ajuda pessoas a encontrarem professores online. O Projeto da NLW visa criar uma aplicação <strong>fullstack</strong> (API REST + Web front-end + Mobile).
+O **Proffy** é uma aplicação Web e Mobile feita para auxiliar na conexão entre os alunos e os professores. Logo, esta aplicação oferece aos professores a possibilidade de registrar aulas, podendo adicionar informações como a disciplina, o custo e horário e aos alunos a possibilidade de buscar pelas aulas cadastradas.
+
+Este projeto foi idealizado pensando no **6 de agosto**, onde se comemora o **Dia Nacional dos Profissionais da Educação**.
+
+Essa aplicação foi realizada durante a Next **Level Week #2**, projeto da [Rocketseat](https://rocketseat.com.br/).
 
 <a id="tecnologias"></a>
 
 ## :computer: Tecnologias
 
-O projeto foi desenvolvido utilizando as tecnologias:
+O backend da aplicação foi desenvolvido utilizando as tecnologias:
 
-- [ReactJS](https://reactjs.org/)
+- [Node.JS](https://nodejs.org/en/docs/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Docker](https://www.docker.com)
+- [React](https://pt-br.reactjs.org/)
+
+<a id="run"></a>
 
 ## :running: Rodando o projeto
 
-1. Pré-requisitos:
+### DEV Containers🤯
+
+A aplicação tem suporte para **[DevContainers](https://code.visualstudio.com/docs/remote/containers)**, para rodar basta ter o **[Docker](https://www.docker.com)** rodando na maquina e o VsCode para entrar no container de desenvolvimento.
+
+### Rodando através da fonte.
+
+#### 1. Pré-requisitos:
 
 - **[Node.js](https://nodejs.org/en/)**, **[Git](https://git-scm.com/)** e um gerenciador de pacotes (**[NPM](https://www.npmjs.com/)** ou **[Yarn](https://yarnpkg.com/)**) instalados na máquina.
+
+#### 2. Instalando dependencias
+
+```bash
+$ npm install
+# ou
+$ yarn install
+```
+
+#### 3. Iniciando o frontend
+
+```bash
+$ npm run start
+# ou
+$ yarn run start
+```

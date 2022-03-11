@@ -1,16 +1,17 @@
 {
-	"env": {
-		"browser": true,
-		"es6": true
-	},
 	"extends": [
-		"plugin:react/recommended",
-		"airbnb",
-		"airbnb-base",
+		"airbnb-typescript",
+		"airbnb/hooks",
 		"plugin:@typescript-eslint/recommended",
-		"prettier/@typescript-eslint",
+		"plugin:jest/recommended",
 		"plugin:prettier/recommended"
 	],
+	"plugins": ["react", "@typescript-eslint", "jest"],
+	"env": {
+		"browser": true,
+		"es6": true,
+		"jest": true
+	},
 	"globals": {
 		"Atomics": "readonly",
 		"SharedArrayBuffer": "readonly"
@@ -21,32 +22,25 @@
 			"jsx": true
 		},
 		"ecmaVersion": 2018,
-		"sourceType": "module"
+		"sourceType": "module",
+		"project": "./tsconfig.json"
 	},
-	"plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
 	"rules": {
-		"prettier/prettier": "error",
-		"react-hooks/rules-of-hooks": "error",
-		"react-hooks/exhaustive-deps": "warn",
-		"react/jsx-filename-extension": [
-			1,
+		"import/no-extraneous-dependencies": [
+			"warn",
 			{
-				"extensions": [".tsx"]
+				"devDependencies": false,
+				"optionalDependencies": false,
+				"peerDependencies": false,
+				"bundleDependencies": false
 			}
 		],
-		"import/prefer-default-export": "off",
-		"import/extensions": [
+		"linebreak-style": "off",
+		"prettier/prettier": [
 			"error",
-			"ignorePackages",
 			{
-				"ts": "never",
-				"tsx": "never"
+				"endOfLine": "auto"
 			}
 		]
-	},
-	"settings": {
-		"import/resolver": {
-			"typescript": {}
-		}
 	}
 }

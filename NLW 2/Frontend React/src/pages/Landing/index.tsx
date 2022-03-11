@@ -10,38 +10,38 @@ import purpleHeartIcon from "../../assets/images/icons/purple-heart.svg";
 import "./styles.css";
 
 const Landing = () => {
-	return (
-		<div id="page-landing">
-			<div id="page-landing-content" className="container">
-				<div className="logo-container">
-					<img src={logo} alt="Proffy" />
-					<h2>Sua plataforma de estudos online.</h2>
-				</div>
-				<img
-					src={landingImg}
-					alt="Plataforma de estudos"
-					className="hero-image"
-				/>
+  return (
+    <div id="page-landing">
+      <div id="page-landing-content" className="container">
+        <div className="logo-container">
+          <img src={logo} alt="Proffy" />
+          <h2>Sua plataforma de estudos online.</h2>
+        </div>
+        <img
+          src={landingImg}
+          alt="Plataforma de estudos"
+          className="hero-image"
+        />
 
-				<div className="buttons-container">
-					<Link to="/study" className="study">
-						<img src={studyIcon} alt="Estudando" />
-						Estudar
-					</Link>
+        <div className="buttons-container">
+          <Link to="/study" className="study">
+            <img src={studyIcon} alt="Estudando" />
+            Estudar
+          </Link>
 
-					<Link to="/give-classes" className="give-classes">
-						<img src={giveClassIcon} alt="Estudar" />
-						Dar aulas
-					</Link>
-				</div>
+          <Link to="/give-classes" className="give-classes">
+            <img src={giveClassIcon} alt="Estudar" />
+            Dar aulas
+          </Link>
+        </div>
 
-				<span className="total-connections">
-					Total de 200 conexões ja realizadas
-					<img src={purpleHeartIcon} alt="Coração Roxo" />
-				</span>
-			</div>
-		</div>
-	);
+        <span className="total-connections">
+          Total de 200 conexões ja realizadas
+          <img src={purpleHeartIcon} alt="Coração Roxo" />
+        </span>
+      </div>
+    </div>
+  );
 };
 
 export default Landing;

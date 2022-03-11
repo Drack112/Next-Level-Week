@@ -20,6 +20,5 @@ jobs:
       - name: run CI
         run: |
           yarn install
-          yarn lint
-          yarn test
+          yarn format
           yarn build
