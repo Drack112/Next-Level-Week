@@ -15,7 +15,7 @@ jobs:
           node-version: 16
           cache: yarn
 
-      - name: 🏗 Setup Frontend React
+      - name: 🏗 Setup Backend Express
         uses: expo/expo-github-action@v7
 
       - name: 📦 Install dependencies
