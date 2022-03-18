@@ -1,12 +1,12 @@
 #page-landing {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+  background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
 
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} 
 
 .content-wrapper {
   position: relative;
@@ -22,8 +22,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  background: url("../../assets/images/landing-ilustra.svg") no-repeat 80%
-    center;
+  background: url('../../assets/images/landing-ilustra.svg') no-repeat 80% center;
 }
 
 .content-wrapper h1 {
@@ -63,12 +62,12 @@
   position: absolute;
   right: 0px;
   bottom: 0px;
-
+  
   width: 80px;
   height: 80px;
-  background: #ffd666;
+  background: #FFD666;
   border-radius: 30px;
-
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,5 +76,5 @@
 }
 
 .content-wrapper .enter-app:hover {
-  background: #96feff;
+  background: #96FEFF;
 }
