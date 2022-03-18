@@ -1,0 +1,48 @@
+{
+  "name": "backend-express",
+  "version": "1.0.0",
+  "description": "O Backend feito em express para a NLW 3",
+  "main": "src/server.ts",
+  "author": "Drack112",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev src/server.ts --transpile-only --ignore-watch node_modules --respawn",
+    "start": "ts-node-dev --start ./src/server.js",
+    "format": "prettier --write src/**/*.ts{,x}",
+    "test-env": "node tests/test_env_connection.js",
+    "typeorm": "ts-node ./node_modules/.bin/typeorm -f ./src/config/ormconfig.ts",
+    "migration:generate": "yarn run typeorm migration:generate -n",
+    "migration:blank": "yarn run typeorm migration:create -n"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "multer": "^1.4.4",
+    "pg": "^8.7.3",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.0",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/express-pino-logger": "^4.0.3",
+    "@types/multer": "^1.4.7",
+    "@types/pino": "^7.0.5",
+    "@types/yup": "^0.29.13",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
+    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.14.0",
+    "typescript": "^4.6.2"
+  }
+}

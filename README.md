@@ -11,3 +11,5 @@ Todos os créditos vão para a Rocketseat :wave: [Participe da comunidade!](http
 Clique na logo abaixo para conferir mais sobre a **_licença_** do projeto.
 
 [![LICENSE](https://img.shields.io/badge/MIT-E58080?style=for-the-badge&logo=bookstack&logoColor=white)](/LICENSE.md)
+
+Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discordapp.com/invite/gCRAFhc)

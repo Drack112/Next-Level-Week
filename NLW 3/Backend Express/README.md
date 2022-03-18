@@ -1,0 +1,109 @@
+<h1 style="text-align:center">Happy Backend</h1>
+<br>
+<div align="center">
+    <img src="https://img.shields.io/badge/Server-nodejs-success">
+    <img src="https://img.shields.io/badge/%3C%3E-typescript-blueviolet">
+    <img src="https://img.shields.io/badge/Database-Postgres-blue">
+</div>
+<br>
+
+<div align="center">
+    <a href="#sobre">Sobre</a> | <a href="#tecnologias">Tecnologias</a> | <a href="#run">Rodando o projeto</a>
+</div>
+
+<a id="sobre"></a>
+
+## 💜 Sobre Projeto Happy
+
+O **_Happy_** é uma aplicação que conecta pessoas à casas de acolhimento institucional para fazer o dia de muitas crianças mais feliz 💜
+
+<a id="tecnologias"></a>
+
+## :computer: Tecnologias
+
+O backend da aplicação foi desenvolvido utilizando as tecnologias:
+
+- [Node.JS](https://nodejs.org/en/docs/)
+- [Express](https://expressjs.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Postgres](https://www.postgresql.org)
+- [TypeORM](https://typeorm.io/#/)
+- [Multer](https://www.npmjs.com/package/multer)
+- [Cors](https://github.com/expressjs/cors)
+- [Docker](https://www.docker.com)
+
+<a id="run"></a>
+
+## :running: Rodando o projeto
+
+### DEV Containers 🤯
+
+A aplicação tem suporte para **[DevContainers](https://code.visualstudio.com/docs/remote/containers)**, para rodar basta ter o **[Docker](https://www.docker.com)** rodando na maquina e o VsCode para entrar no container de desenvolvimento.
+
+### Rodando através da fonte.
+
+#### 1. Pré-requisitos:
+
+- **[Node.js](https://nodejs.org/en/)**, **[Git](https://git-scm.com/)**, um gerenciador de pacotes (**[NPM](https://www.npmjs.com/)** ou **[Yarn](https://yarnpkg.com/)**) e **_[Docker + Docker Compose](https://www.docker.com)_** instalados na máquina.
+
+#### 2. Instalando dependências
+
+```bash
+$ npm install
+# ou
+$ yarn install
+```
+
+#### 3. Criando o Banco de Dados Postgres
+
+Preencha os dados do arquivo `.env.example` e depois renomeie ele para `.env`
+
+```.env
+# Dados Obrigatórios
+POSTGRES_DB=
+POSTGRES_USER=
+POSTGRES_PASSWORD=
+POSTGRES_HOST=
+
+# App
+PORTA=
+
+# Dados Opcionais
+PGADMIN_DEFAULT_EMAIL=
+PGADMIN_DEFAULT_PASSWORD=
+
+```
+
+Caso queira ter certeza que o arquivo `.env` está tendo os valores lidos pelo **NodeJS**, você pode rodar um arquivo de teste no terminal e ver o objeto com os valores preenchidos.
+
+```bash
+$ yarn test-env
+```
+
+Caso os valores foram retornados, você pode avançar para a criação do banco de dados:
+
+```bash
+$ docker-compose up db
+```
+
+```bash
+$ yarn run typeorm migration:run
+# ou
+$ npm run typeorm migration:run
+```
+
+#### 4 Iniciando a Api
+
+```bash
+$ npm run dev
+# ou
+$ yarn run dev
+```
+
+Não esqueça de configurar devidamente seu ambiente e vamos lá ;)
+
+\*Este conteúdo foi sendo desenvolvido com base nas aulas do modulo **Booster\***
+
+#### _Sinta-se livre para colaborar, toda ajuda é bem vinda ;)_
+
+<br/>

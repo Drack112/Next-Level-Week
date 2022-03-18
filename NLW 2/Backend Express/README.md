@@ -46,8 +46,7 @@ A aplicação tem suporte para **[DevContainers](https://code.visualstudio.com/d
 
 - **[Node.js](https://nodejs.org/en/)**, **[Git](https://git-scm.com/)**, um gerenciador de pacotes (**[NPM](https://www.npmjs.com/)** ou **[Yarn](https://yarnpkg.com/)**) e **_[Docker + Docker Compose](https://www.docker.com)_** instalados na máquina.
 
-#### 2. Instalando dependencias
-
+#### 2. Instalando dependências
 ```bash
 $ npm install
 # ou
