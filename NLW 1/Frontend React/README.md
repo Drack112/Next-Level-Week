@@ -55,7 +55,6 @@ $ npm install
 $ yarn install
 ```
 
-
 #### 3. Iniciando o frontend
 
 ```bash

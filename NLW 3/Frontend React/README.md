@@ -15,7 +15,7 @@
 
 ## 💜 Sobre Projeto Happy
 
-O ***Happy*** é uma aplicação que conecta pessoas à casas de acolhimento institucional para fazer o dia de muitas crianças mais feliz 💜
+O **_Happy_** é uma aplicação que conecta pessoas à casas de acolhimento institucional para fazer o dia de muitas crianças mais feliz 💜
 
 <a id="tecnologias"></a>
 

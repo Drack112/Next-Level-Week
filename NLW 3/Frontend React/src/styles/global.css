@@ -5,10 +5,13 @@
 }
 
 body {
-  color: #FFF;
-  background: #EBF2F5;
+  color: #fff;
+  background: #ebf2f5;
 }
 
-body, input, button, textarea {
+body,
+input,
+button,
+textarea {
   font: 600 18px Nunito, sans-serif;
 }

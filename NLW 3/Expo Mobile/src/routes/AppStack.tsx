@@ -1,53 +1,53 @@
-import React from 'react';
+import React from "react";
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 
 const { Navigator, Screen } = createStackNavigator();
 
-import OrphanagesMap from '../pages/OrphanagesMap';
-import SelectMapPosition from '../pages/CreateOrphanage/SelectMapPosition';
-import OrphanageData from '../pages/CreateOrphanage/OrphanageData';
-import OrphanageDetails from '../pages/OrphanageDetails';
-import Header from '../components/Header';
+import OrphanagesMap from "../pages/OrphanagesMap";
+import SelectMapPosition from "../pages/CreateOrphanage/SelectMapPosition";
+import OrphanageData from "../pages/CreateOrphanage/OrphanageData";
+import OrphanageDetails from "../pages/OrphanageDetails";
+import Header from "../components/Header";
 
 export default function Routes() {
   return (
     <NavigationContainer>
-      <Navigator 
-        screenOptions={{ 
-          headerShown: false, 
-          cardStyle: { backgroundColor: '#F2F3F5' }
-        }}>
-        <Screen 
-          name="OrphanagesMap" 
-          component={OrphanagesMap} 
-        />
+      <Navigator
+        screenOptions={{
+          headerShown: false,
+          cardStyle: { backgroundColor: "#F2F3F5" },
+        }}
+      >
+        <Screen name="OrphanagesMap" component={OrphanagesMap} />
 
-        <Screen 
-          name="SelectMapPosition" 
+        <Screen
+          name="SelectMapPosition"
           component={SelectMapPosition}
-          options={{ 
+          options={{
             headerShown: true,
             header: (props) => <Header title="Selecione no mapa" {...props} />,
           }}
         />
-        
-        <Screen 
-          name="OrphanageData" 
+
+        <Screen
+          name="OrphanageData"
           component={OrphanageData}
-          options={{ 
+          options={{
             headerShown: true,
             header: (props) => <Header title="Dados do orfanato" {...props} />,
           }}
         />
-        
-        <Screen 
+
+        <Screen
           name="OrphanageDetails"
           component={OrphanageDetails}
-          options={{ 
+          options={{
             headerShown: true,
-            header: (props) => <Header title="Orfanato" showCancel={false} {...props} />,
+            header: (props) => (
+              <Header title="Orfanato" showCancel={false} {...props} />
+            ),
           }}
         />
       </Navigator>
