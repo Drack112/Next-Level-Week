@@ -1,12 +1,12 @@
 import {
-  Column,
-  CreateDateColumn,
   Entity,
   PrimaryColumn,
+  Column,
   UpdateDateColumn,
+  CreateDateColumn,
 } from "typeorm";
 
-import { v4 as uuidV4 } from "uuid";
+import { v4 as uuid } from "uuid";
 
 @Entity("settings")
 class Setting {
@@ -27,7 +27,7 @@ class Setting {
 
   constructor() {
     if (!this.id) {
-      this.id = uuidV4();
+      this.id = uuid();
     }
   }
 }

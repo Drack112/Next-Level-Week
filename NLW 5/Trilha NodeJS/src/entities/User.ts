@@ -1,20 +1,20 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
-import { v4 as uuidV4 } from "uuid";
+import { Entity, PrimaryColumn, Column, CreateDateColumn } from "typeorm";
+import { v4 as uuid } from "uuid";
 
 @Entity("users")
 class User {
-  @PrimaryGeneratedColumn()
+  @PrimaryColumn()
   id: string;
 
   @Column()
   email: string;
 
-  @Column()
-  created_at: string;
+  @CreateDateColumn()
+  created_at: Date;
 
   constructor() {
     if (!this.id) {
-      this.id = uuidV4();
+      this.id = uuid();
     }
   }
 }
