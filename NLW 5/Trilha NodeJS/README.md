@@ -1,69 +1,38 @@
-import { getCustomRepository, Repository } from "typeorm";
-import { Connection } from "../entities/Connection";
-import { ConnectionsRepository } from "../repositories/ConnectionsRepository";
+<h1 align="center">Chatty</h1>
 
-interface IConnectionCreate {
-    socket_id: string;
-    user_id: string;
-    admin_id?: string;
-    id?: string;
-}
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=8257E5&labelColor=000000">
 
-class ConnectionsService {
-    private connectionsRepository: Repository<Connection>
+ <img src="https://img.shields.io/static/v1?label=NLW&message=05&color=8257E5&labelColor=000000" alt="NLW 05" />
+</p>
 
-    constructor() {
-        this.connectionsRepository = getCustomRepository(ConnectionsRepository);
-    }
+<br>
 
-    async create({ socket_id, user_id, admin_id, id }: IConnectionCreate) {
-        const connection = this.connectionsRepository.create({
-            socket_id,
-            user_id,
-            admin_id,
-            id
-        });
+## ✨ Tecnologias
 
-        await this.connectionsRepository.save(connection);
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-        return connection;
-    }
+- [Node.js](https://nodejs.org/en/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Express](https://expressjs.com/pt-br/)
+- [Socket.io](https://socket.io/)
 
-    async findByUserId(user_id: string) {
-        const connection = await this.connectionsRepository.findOne({
-            user_id
-        });
+## 💻 Projeto
 
-        return connection;
-    }
+O Chatty é um chat para atendimento de clientes em tempo real.
 
-    async findAllWithoutAdmin() {
-        const connections = await this.connectionsRepository.find({
-            where: { admin_id: null },
-            relations: ["user"],
-        });
+## 🚀 Como executar
 
-        return connections;
-    }
+- Clone o repositório
+- Caso ainda não tenha o arquivo `database.sqlite` dentro da pasta `src/database`, crie esse arquivo e rode `yarn typeorm migration:run` para criar as tabelas do banco de dados.
+- Rode o `yarn dev` para iniciar a aplicação.
 
-    async findBySocketID(socket_id: string) {
-        const connection = await this.connectionsRepository.findOne({
-            socket_id
-        });
+Por fim, a aplicação estará disponível em `http://localhost:3333`
 
-        return connection;
-    }
+## 📄 Licença
 
-    async updateAdminID(user_id: string, admin_id: string) {
-        await this.connectionsRepository
-        .createQueryBuilder()
-        .update(Connection)
-        .set({ admin_id })
-        .where("user_id = :user_id", {
-            user_id
-        })
-        .execute()
-    }
-}
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
-export { ConnectionsService };
+---
+
+Feito com ♥ by Rocketseat 👋🏻 [Participe da nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
