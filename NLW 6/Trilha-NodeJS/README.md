@@ -28,7 +28,7 @@ Valoriza é uma plataforma para promover o reconhecimento entre companheiros de 
 
 - Clone o repositório
 - Preencha o arquivo `.env.example` com os dados que deseja, depois o renomeie para `.env`
-- Preencha o arquivo `ormconfig.example.json` com os dados que deseja, depois o renomeie para `ormconfig.example.json`
+- Preencha o arquivo `ormconfig.example.json` com os dados que deseja, depois o renomeie para `ormconfig.json`
 - Rode `yarn` para baixar as dependências
 - Rode `docker-compose up --build -V` para fazer o docker rodar todos os apps e banco de dados Postgres
 - Dentro do container do app, rode `yarn typeorm migration:run` para criar as tabelas do banco de dados.
