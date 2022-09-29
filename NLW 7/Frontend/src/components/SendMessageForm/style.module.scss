@@ -1,0 +1,123 @@
+.sendMessageFormWrapper {
+	background: #1b1b1f;
+	padding: 24px;
+	align-self: center;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	position: relative;
+}
+
+.singOutButton {
+	background-color: transparent;
+	border: none;
+	color: #c4c4cc;
+
+	position: absolute;
+	left: 24px;
+	top: 24px;
+
+	cursor: pointer;
+	&:hover {
+		filter: brightness(0.9);
+	}
+}
+.userIformation {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+
+	.userImage {
+		padding: 3px;
+		background: linear-gradient(100deg, #ff008e 0, #ffcd1e 100%);
+		border-radius: 50%;
+		line-height: 0;
+		img {
+			height: 94px;
+			width: 94px;
+			border-radius: 50%;
+			border: 6px solid #121214;
+		}
+	}
+
+	span {
+		font-size: 16px;
+		margin-left: 12px;
+	}
+
+	.userName {
+		font-size: 24px;
+		line-height: 30px;
+		margin-top: 16px;
+	}
+	.userGithub {
+		display: flex;
+		align-items: center;
+		margin-top: 8px;
+		color: #c4c4cc;
+		gap: 8px;
+	}
+}
+.sendMessageForm {
+	display: flex;
+	flex-direction: column;
+	align-self: stretch;
+	align-items: center;
+	margin-top: 48px;
+
+	background-color: #202024;
+	label {
+		padding: 12px 24px;
+		font-size: 20px;
+		background: #29292e;
+		font-weight: bold;
+		text-align: center;
+		width: 100%;
+	}
+	textarea {
+		background: transparent;
+		border: none;
+		padding: 24px;
+		resize: none;
+		height: 160px;
+		color: #e1e1e6;
+		font-size: 16px;
+		line-height: 24px;
+		width: 100%;
+
+		&:focus {
+			outline: none;
+		}
+
+		&::placeholder {
+			color: #8d8d99;
+		}
+	}
+
+	button {
+		align-self: flex-end;
+		background: #ff008e;
+		margin-top: 21px;
+		padding: 0 32px;
+		height: 40px;
+		color: #fff;
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-decoration: none;
+		border: 0;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.3s ease;
+
+		&:hover {
+			filter: brightness(0.8);
+		}
+	}
+}
