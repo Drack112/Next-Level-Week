@@ -1,0 +1,41 @@
+version: "3.4"
+
+services:
+  app:
+    build:
+      context: .
+      target: development
+    entrypoint: dockerize -wait tcp://db:5432 -timeout 40s .docker/entrypoints/prod.sh
+    container_name: backend-express
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/node/app
+    depends_on:
+      - db
+    networks:
+      - postgres
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+
+  db:
+    build: .docker/postgres
+    container_name: postgres-database
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - .docker/dbdata:/var/lib/postgresql/data
+      - .docker/postgres:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: always
+    tty: true
+    env_file:
+      - .env
+
+networks:
+  postgres:
+    driver: bridge

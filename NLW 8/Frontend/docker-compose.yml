@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  app:
+    container_name: vite-app
+    build:
+      context: .
+      target: production
+    entrypoint: ./.docker/entrypoints/dev.sh
+    volumes:
+      - .:/home/app
+      - ./node_modules:/home/app/node_modules
+    ports:
+      - 3000:3000
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"

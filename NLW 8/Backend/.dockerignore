@@ -1,0 +1,7 @@
+node_modules
+dist
+build
+/*.js
+Dockerfile
+README.md
+.docker/dbdata
